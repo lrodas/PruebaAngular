@@ -4,7 +4,7 @@ import { TodoComponent } from './todo/todo.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PipesModule } from '../pipes/pipes.module';
-import { TarkCardComponent } from './tark-card/tark-card.component';
+import { TaskCardComponent } from './task-card/task-card.component';
 
 
 
@@ -12,7 +12,7 @@ import { TarkCardComponent } from './tark-card/tark-card.component';
   declarations: [
     TodoComponent,
     TaskFormComponent,
-    TarkCardComponent
+    TaskCardComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +22,7 @@ import { TarkCardComponent } from './tark-card/tark-card.component';
   exports: [
     TodoComponent,
     TaskFormComponent,
-    TarkCardComponent
+    TaskCardComponent
   ],
 })
 export class ComponentsModule { }

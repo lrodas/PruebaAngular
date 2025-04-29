@@ -5,10 +5,10 @@ import { TaskStatus } from '../../models/task_status.enum';
 @Component({
   selector: 'tark-card',
   standalone: false,
-  templateUrl: './tark-card.component.html',
-  styleUrl: './tark-card.component.css'
+  templateUrl: './task-card.component.html',
+  styleUrl: './task-card.component.css'
 })
-export class TarkCardComponent {
+export class TaskCardComponent {
 
   public taskStatus = TaskStatus;
   @Input() public task!: Task;
