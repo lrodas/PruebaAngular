@@ -1,0 +1,15 @@
+<div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-16">
+  <div class="px-4 py-2">
+      <h1 class="text-gray-800 font-bold text-2xl uppercase">To-Do List</h1>
+  </div>
+  <task-form></task-form>
+  <ul class="divide-y divide-gray-200 px-4">
+      <li class="py-4" *ngFor="let task of _taskService.getTasks()">
+          <tark-card [task]="task" (taskSelected)="toggleTask($event)"></tark-card>
+      </li>
+  </ul>
+  <div class="px-4 py-2">
+      <button (click)="saveTasks()" class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded w-full">
+          Guardar Cambios
+      </button>
+</div>

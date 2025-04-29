@@ -1,0 +1,19 @@
+<div class="flex items-center">
+  <input
+    id="todo1"
+    name="todo1"
+    type="checkbox"
+    [checked]="task.status === taskStatus.COMPLETE"
+    (change)="toggleStatus(task)"
+    class="h-4 w-4 text-teal-600 focus:ring-teal-500 border-gray-300 rounded"
+  />
+  <label
+    for="todo1"
+    class="ml-3 block text-gray-900"
+    [style.color]="task.status === taskStatus.COMPLETE ? 'green' : 'inherit'"
+    [style.text-decoration]="task.status === taskStatus.COMPLETE ? 'line-through' : 'none'"
+  >
+    <span class="text-lg font-medium"> {{ task.title }} </span>
+    <span class="text-sm font-light text-gray-500">{{ task.status }}</span>
+  </label>
+</div>

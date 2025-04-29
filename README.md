@@ -1,59 +1,85 @@
-# ProjectoAngular
+# ProjectoAngular - Prueba Técnica
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+Este proyecto es una aplicación Angular desarrollada como parte de una prueba técnica. La aplicación incluye funcionalidades como gestión de tareas, protección de rutas mediante guards, y el uso de servicios para manejar datos y estados.
 
-## Development server
+## Requisitos previos
 
-To start a local development server, run:
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
+
+- [Node.js](https://nodejs.org/) (versión LTS recomendada)
+- [Angular CLI](https://angular.io/cli) (versión 19.1.5 o superior)
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone <URL_DEL_REPOSITORIO>
+   cd ProjectoAngular
+   ```
+
+2. Instala las dependencias del proyecto:
+   ```bash
+   npm install
+   ```
+
+## Servidor de desarrollo
+
+Para iniciar un servidor de desarrollo local, ejecuta:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Una vez que el servidor esté en ejecución, abre tu navegador y navega a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que modifiques los archivos fuente.
 
-## Code scaffolding
+## Funcionalidades principales
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Gestión de tareas**: Agregar, editar y cambiar el estado de las tareas.
+- **Protección de rutas**: Uso de guards para evitar la pérdida de datos no guardados.
+- **Persistencia de datos**: Almacenamiento de tareas en el almacenamiento local del navegador.
 
-```bash
-ng generate component component-name
-```
+## Pruebas
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Pruebas unitarias
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para ejecutar las pruebas unitarias con [Karma](https://karma-runner.github.io), utiliza el siguiente comando:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### Pruebas end-to-end
 
-For end-to-end (e2e) testing, run:
+Para pruebas end-to-end (e2e), asegúrate de tener un framework configurado (como [Cypress](https://www.cypress.io/) o [Protractor](https://www.protractortest.org/)) y ejecuta:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Construcción
 
-## Additional Resources
+Para compilar el proyecto para producción, ejecuta:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+ng build --configuration production
+```
+
+Los artefactos de compilación se almacenarán en el directorio `dist/`. La compilación de producción optimiza la aplicación para rendimiento y velocidad.
+
+## Estructura del proyecto
+
+- **`src/app/components`**: Contiene los componentes de la aplicación, como `TodoComponent` y `TarkCardComponent`.
+- **`src/app/services`**: Contiene los servicios, como `TaskService` y `StorageService`.
+- **`src/app/guards`**: Contiene los guards, como `UnsavedChangesGuard`.
+- **`src/environments`**: Configuración de entornos para desarrollo y producción.
+
+## Notas adicionales
+
+- Este proyecto utiliza `crypto-js` para cifrar y descifrar datos sensibles.
+- Tailwind CSS está configurado para el diseño de la interfaz de usuario.
+
+## Recursos adicionales
+
+Para más información sobre Angular CLI y sus comandos, visita la [documentación oficial](https://angular.dev/tools/cli).
+
+---
